@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+{% load static %}
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{% static '/style.css' %}">
+  <title>arcad.io</title>
+  <link rel="icon" type="image/x-icon" href="{% static '/media/50.png' %}"
+
+
+</head>
+
+<body>
+
+  <!-- Bootstrap core JavaScript-->
+ <script src="{% static 'script.js' %}"></script>
+ {% block content %}
+ {% endblock %}
+
+</body>
+</html>

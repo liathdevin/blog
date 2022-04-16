@@ -1,0 +1,101 @@
+@font-face {
+    src: url(media/fonts/ARCADECLASSIC.TTF);
+    font-family: arcade;
+}
+* {
+  font-family: arcade;
+
+/*popup*/
+
+}
+.popup .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index:1;
+
+}
+
+.popup .content {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 450px;
+  height: 220px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+
+}
+
+.popup .close-btn {
+  cursor: pointer;
+position:absolute;
+right: 20px;
+top: 20px;
+width: 30px;
+height: 30px;
+background: #222;
+color: #fff;
+font-size: 25px;
+font-weight: 600;
+line-height: 30px;
+text-align: center;
+border-radius: 50%;
+
+}
+
+.popup.active .overlay {
+display: block;
+
+}
+
+.popup.active .content{
+transition: all 300ms ease-in-out;
+transform:translate(-50%,-50%)scale(1);
+
+/*/popup*/
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: lightskyblue;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+.navbar{
+    width: 88%;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    cursor: pointer;
+
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+
+
+}
+.navbar ul li a{
+    font-family: arcade;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+
+}
