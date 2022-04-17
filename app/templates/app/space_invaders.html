@@ -42,10 +42,10 @@
         <canvas id="gameCanvas"></canvas>
         </div>
 
-
         <script src="static/starfield.js"></script>
         <script src="static/spaceinvaders.js"></script>
         <script>
+
 
             //  Create the starfield.
             var container = document.getElementById('starfield');
@@ -98,19 +98,12 @@
                 game.mute();
                 document.getElementById("muteLink").innerText = game.sounds.mute ? "unmute" : "mute";
             }
-        </script>
-        <script type="text/javascript">
+            </script>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-41728580-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+      <form name='scoreForm' method="post" action="{% url 'guardapuntuacion'%}" id="save_score" >
+          {% csrf_token %}
+          <input type="hidden" name="score_field" value="0" id="score_field">
+          <input type="submit" name="submit" value="Guardar puntuacion">
+      </form>
     </body>
 </html>

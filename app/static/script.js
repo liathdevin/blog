@@ -1,7 +1,12 @@
 /*popup*/
-
-function togglePopup(){
-  document.getElementById("popup1").classList.toggle("active")
-}
-
-/*space invaders*/
+$(window).load(function () {
+    $(".trigger_popup_fricc").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+});

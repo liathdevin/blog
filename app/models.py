@@ -1,10 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Leaderboard(models.Model):
-    user = models.CharField(max_length=200)
-    score = models.IntegerField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    score = models.IntegerField(default="0")
 
     def __str__(self):
-        text = self.user + " " + str(self.score)
+        text = str(self.user) + " " + str(self.score)
         return text

@@ -12,6 +12,7 @@ urlpatterns = [
     path('leaderboard', views.leaderboard, name='leaderboard'),
     path('login', auth_views.LoginView.as_view(), name="login"),
     path('signup', views.signup, name='signup'),
+    path('guardapuntuacion', views.guardapuntuacion, name='guardapuntuacion'),
 
     #path("register", views.register_request, name="register"),
     #path("login", views.register_request, name="login"),
