@@ -6,7 +6,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 
 def home(request):
-    template = loader.get_template('app/index.html')
+    template = loader.get_template('app/home.html')
+    return HttpResponse(template.render({}, request))
+
+def space_invaders(request):
+    template = loader.get_template('app/space_invaders.html')
     return HttpResponse(template.render({}, request))
 
 def leaderboard(request):

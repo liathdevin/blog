@@ -8,6 +8,7 @@ import os
 
 urlpatterns = [
     path('home', views.home, name='home'),
+    path('space_invaders', views.space_invaders, name='space_invaders'),
     path('leaderboard', views.leaderboard, name='leaderboard'),
     path('login', auth_views.LoginView.as_view(), name="login"),
     path('signup', views.signup, name='signup'),
